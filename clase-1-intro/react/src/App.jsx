@@ -15,50 +15,28 @@ function App() {
 			<div id="wrapper">
 					<section id="contact">
 						<div className="inner">
+							{message}
 							<section>
+								<form method="post" action="#">
 									<div className="fields">
 										<div className="field half">
-											<label>Name</label>
-											<input value={name}  onChange={(e) => setName(e.target.value)} type="text" name="name" id="name" />
+											<label htmlFor="name">Name</label> 
+											<input type="text" name="name" id="name" value={name} onChange={(e) => setName(e.target.value)}/>
 										</div>
 										<div className="field half">
-											<label>Email</label>
-											<input value={email}  onChange={(e) => setEmail(e.target.value)} type="text" name="email" id="email" />
+											<label htmlFor="email">Email</label>
+											<input type="text" name="email" id="email"  value={email} onChange={(e) => setEmail(e.target.value)}/>
 										</div>
 										<div className="field">
-											<label>Message</label>
-											<textarea value={message} onChange={(e) => setMessage(e.target.value)} name="message" id="message" rows="6"></textarea>
+											<label htmlFor="message">Message</label>
+											<textarea name="message" id="message" rows="6" value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
 										</div>
 									</div>
 									<ul className="actions">
-										<li><input type="submit"onClick={sendMessage} value="Send Message" className="primary"/></li>
+										<li><input onClick={sendMessage} type="submit" value="Send Message" className="primary" id="send"/></li>
 										<li><input type="reset" value="Clear" /></li>
 									</ul>
-							</section>
-							<section className="split">
-								<section>
-									<div className="contact-method">
-										<span className="icon solid alt fa-envelope"></span>
-										<h3>Email</h3>
-										<a href="#">information@untitled.tld</a>
-									</div>
-								</section>
-								<section>
-									<div className="contact-method">
-										<span className="icon solid alt fa-phone"></span>
-										<h3>Phone</h3>
-										<span>(000) 000-0000 x12387</span>
-									</div>
-								</section>
-								<section>
-									<div className="contact-method">
-										<span className="icon solid alt fa-home"></span>
-										<h3>Address</h3>
-										<span>1234 Somewhere Road #5432<br />
-										Nashville, TN 00000<br />
-										United States of America</span>
-									</div>
-								</section>
+								</form>
 							</section>
 						</div>
 					</section>
