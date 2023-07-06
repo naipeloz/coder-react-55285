@@ -1,15 +1,17 @@
+import { useState } from "react";
+
 function Layout (props) {
-  return (
+  
+
+  return(
     <div>
-      <header>
-        <h1>{props.title}</h1>
-      </header>
-      <main>
-       { props.children }
-      </main>
-      <footer>
-        Footer
-      </footer>
+      <div>
+        <h1>La super calculadora</h1>
+        
+      </div>
+      <div>
+        { props.children }
+      </div>
     </div>
   )
 }

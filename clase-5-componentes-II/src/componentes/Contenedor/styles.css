@@ -1,0 +1,11 @@
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 10px;
+  background: gray;
+  padding: 10px;
+  border-radius: 5px;
+  height: 800px;
+  width: 500px;
+}

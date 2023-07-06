@@ -1,17 +1,12 @@
-import Layout from "./componentes/Layout"
-import Home from "./componentes/Home"
+import Layout from "./componentes/Layout";
+import Contenedor from "./componentes/Contenedor";
 
 function App() {
 
   return (
-    <>
-      <Layout
-        title="Esta es la pagina del Home"
-      >
-        <h1>hola estamos probando</h1>
-        <p>Esto que es un children</p>
-      </Layout>  
-    </>
+    <Layout>
+      <Contenedor/>
+    </Layout>
   )
 }
 
